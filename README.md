@@ -66,6 +66,21 @@ ESC는 3가지 핵심 기술로 구성됩니다.
 
 본 레포지토리는 ESC의 핵심 아이디어를 검증하기 위한 Python 예시 코드를 포함합니다.
 
+```bash
+ESC-Project/
+├── core/                 # ESC 핵심 알고리즘
+│   ├── gossip_agent.py
+│   ├── test_osnet.py
+│   ├── gnn_predictor.py
+│   └── spatial_validator.py
+├── simulator/            # (★) UI 프로토타입 시뮬레이터
+│   ├── index.html
+│   └── ...
+├── utils/                # 보조 유틸리티
+│   └── bayesian_calculator.py
+└── README.md
+```
+
 ### `test_osnet.py`
 * [cite_start]OSNet (Re-ID) 모델을 로드하고 양자화한 뒤 [cite: 192, 194][cite_start], 단일 이미지에 대한 추론 시간을 측정하여 Jetson Orin Nano 환경에서의 실행 가능성(목표: 300ms 이내)을 검증합니다[cite: 199, 208].
 * 또한 Re-ID 모델이 256차원의 특징 벡터를 출력하는지 확인합니다[cite: 41, 209].
